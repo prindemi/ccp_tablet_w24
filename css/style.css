@@ -1,0 +1,186 @@
+body{
+    background-color: white;
+    margin:5px;
+    padding:5px;
+    line-height:1.15;
+    text-align: center;
+}
+
+h1, h2, h3{
+    font-weight: bold;
+    margin: 15px 0px;
+    color: darkslategray;
+    text-align: center;
+}
+
+h1{
+    font-size: x-large;
+}
+
+h2{
+    font-size: large;
+    font-style: italic;
+}
+
+h3{
+    font-size: medium;
+    text-decoration: underline;
+}
+
+main img{
+    align-items: center;
+    border: double 6px #ffc8f7;
+    border-radius: 12px;
+}
+
+p{
+    line-height: 2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkslategray;
+    background-color: #ffc8f7;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.button1, .button2, .button3, .button4{
+    background-color: #ffc8f7;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.skip-to-main{
+    position: absolute;
+    left: -1000px;
+}
+.skip-to-main:focus{
+    position: relative;
+    left: 10px;
+}
+
+/* nav ul{
+    display: inline-block;
+} */
+
+#homepage .button1, #petspage .button2, #recipespage .button3, #travelpage .button4{
+    background-color: #a56ca0;
+    text-decoration: underline;
+    border: inset;
+}
+
+@media screen and (min-width: 700px){
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .index_container, .pets_container, .recipes_container, .travel_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 10px;
+        margin: 10px;
+    }
+
+    .index_container img, .pets_container img, .recipes_container img, .travel_container img{
+        max-width: 100%;
+    }
+
+    .index_container{
+        align-items: center;
+        justify-items: end;
+    }
+
+    .pets_container{
+        align-items: stretch;
+        justify-items: start;
+    }
+
+    .pets_container p{
+        grid-column: 2 / -1;
+    }
+
+    .pets_container p:nth-of-type(even){
+        grid-column: 1 / -1;
+    }
+
+    .pets_container ul{
+        text-align: left;
+        list-style: circle;
+    }
+
+    .pets_container h1, .pets_container h2, .pets_container h3, .recipes_container h2, .travel_container h2, .travel_container h3{
+        grid-column: 1 / -1;
+    }
+
+    .recipes_container, .travel_container{
+        justify-items: center;
+    }
+
+    .pancakes-grid01{
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .pancake-ingredients-header, .pancake-steps-header, .spaghetti-ingredients-header, .spaghetti-steps-header, .soup-ingredients-header, .soup-steps-header{
+        margin: 0;
+    }
+
+    .pancake-ingredients-list, .pancake-steps-list, .spaghetti-ingredients-list, .spaghetti-steps-list, .soup-ingredients-list, .soup-steps-list{
+        padding: 20px;
+    }
+
+    .pancakes-grid02{
+        grid-column: 1 / -1;
+        grid-row: 4;
+    }
+
+    .spaghetti-grid01{
+        grid-column: 2;
+        grid-row: 7;
+    }
+
+    .spaghetti-grid02{
+        grid-column: 1 / -1;
+        grid-row: 8;
+    }
+
+    .soup-grid01{
+        grid-column: 2;
+        grid-row: 11;
+    }
+
+    .soup-grid02{
+        grid-column: 1 / -1;
+        grid-row: 12;
+    }
+
+    .first-pic{
+        grid-column: 1 / -1;
+    }
+
+    .gallery {
+        display: block;
+        overflow: auto;
+        white-space: nowrap;
+        padding: 10px;
+    }
+
+}
